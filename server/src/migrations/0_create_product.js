@@ -61,14 +61,14 @@ module.exports = {
         type: Sequelize.TEXT
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
-        defaultValue: 0
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
-        defaultValue: 0
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       }
     });
 
