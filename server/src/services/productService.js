@@ -30,17 +30,19 @@ export const getAllProducts = () => new Promise(async (resolve, reject) => {
 })
 export const getOneProduct = (productId) => new Promise(async (resolve, reject) => {
     try {
-        // console.log("hêhee")
 
       const response = await db.Product.findOne({
         where: { id: productId },
-        raw: true,
+        raw: true,   
         nest: true,
         attributes: {
-          exclude: ['createAt', 'updateAt']
-        }
+          exclude: ['createAt', 'updateAt'],
+        },
+        include: [{
+          model: db.PriceList,
+        },]
       });
-      
+
       if (response) {
         response.img=response.img.split(';');
         resolve({

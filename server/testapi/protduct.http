@@ -13,6 +13,8 @@ GET http://localhost:3001/api/v1/product/all
 ###
 GET http://localhost:3001/api/v1/product/questions
 ###
+
+
 GET http://localhost:3001/api/v1/product/get?productId=100002
 #product/:productId
 ###
