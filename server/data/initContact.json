@@ -64,6 +64,18 @@
         "title": "",
         "link": "Rửa ảnh online - chất lượng cao",
         "theme": "service"
+    },
+    {
+        "name": "slider",
+        "title": "https://res.cloudinary.com/djchyv9o9/image/upload/v1686663887/Lenticular/anh_bia_card_lenti_egab75.jpg",
+        "link": "100000",
+        "theme": "Image Slider"
+    },
+    {
+        "name": "slider",
+        "title": "https://res.cloudinary.com/djchyv9o9/image/upload/v1686663987/Lenticular/anh_bia_card_pvc-01-01_u5ftr4.jpg",
+        "link": "100002",
+        "theme": "Image Slider"
     }
 
 ]

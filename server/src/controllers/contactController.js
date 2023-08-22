@@ -6,9 +6,9 @@ import { interalServerError, badRequest } from "../middlewares/handle_errors"
 export const getAll = async (req, res) => {
     try {
 
-        const userId  = req.query.userId
-        // console.log(req.query)
-        const response = await Services.getAll(userId)
+        // const userId  = req.query.userId
+        // console.log(req.query.userId)
+        const response = await Services.getAll()
         return res.status(200).json(response)
 
     } catch (error) {

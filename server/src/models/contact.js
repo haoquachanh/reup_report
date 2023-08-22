@@ -1,5 +1,6 @@
 'use strict';
 const { Model } = require('sequelize');
+const sequelize = require('../../connection_database');
 
 module.exports = (sequelize, DataTypes) => {
   class Contact extends Model {
@@ -7,9 +8,10 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Contact.init({
+  Contact.init(
+    {
     id: {
-      // allowNull: false,
+      autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER
     },
@@ -21,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
     sequelize,
     modelName: 'Contact',
+    tableName: 'contacts',
   });
   return Contact;
 };

@@ -2,7 +2,7 @@ import db from '../models'
 // const cloudinary = require('cloudinary').v2;
 
 
-export const getAll = async (userId) => {
+export const getAll = async () => {
   try {
     const response = await db.Contact.findAll();
 
